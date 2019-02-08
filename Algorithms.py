@@ -76,7 +76,7 @@ def Decisiontree_Model(df):
          clf = DecisionTreeClassifier(random_state=0)
          clf.fit(X_train,y_train)
          pr1 = str(clf.predict(X_test))
-         cm,cm1=confusion_matrix(y_test,pr1).tolist()
+         cm,cm1=confusion_matrix(y_test,pr1)
          return  "Score =  " + str(clf.score(X_test,y_test)) + " and  " + "Predict  = " + str(cm)
 
 
